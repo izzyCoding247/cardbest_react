@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+.text-shadow {
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clip-hexagon {
+    clip-path: polygon(
+      25% 6.7%,
+      75% 6.7%,
+      100% 50%,
+      75% 93.3%,
+      25% 93.3%,
+      0% 50%
+    );
+  }
+
+@layer components {
+  .glass {
+    @apply 
+      bg-white/50
+      backdrop-blur-xl
+      backdrop-saturate-150
+      border border-white/25
+      shadow-sm shadow-black/5;
+  }
+}
